@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -18,6 +17,7 @@ import {
   Linkedin 
 } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { CONTACT_INFO } from '@/config/contact';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -106,8 +106,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Phone</h3>
-                    <a href="tel:+918431678966" className="text-gray-600 hover:text-primary transition-colors">
-                      +91 843 167 8966
+                    <a 
+                      href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`} 
+                      className="text-gray-600 hover:text-primary transition-colors"
+                    >
+                      {CONTACT_INFO.phone}
                     </a>
                   </div>
                 </div>
@@ -118,8 +121,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
-                    <a href="mailto:info@craftsyvisions.com" className="text-gray-600 hover:text-primary transition-colors">
-                      info@craftsyvisions.com
+                    <a 
+                      href={`mailto:${CONTACT_INFO.email}`} 
+                      className="text-gray-600 hover:text-primary transition-colors"
+                    >
+                      {CONTACT_INFO.email}
                     </a>
                   </div>
                 </div>
