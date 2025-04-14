@@ -87,7 +87,7 @@ const Portfolio = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="section-padding" ref={(el) => addToRefs(el, 0)}>
+      <section className="section-padding" ref={(el) => addToRefs(el as HTMLDivElement, 0)}>
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-12 items-center opacity-0">
             <div>
@@ -123,7 +123,7 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="section-padding bg-gray-50" ref={(el) => addToRefs(el, 1)}>
+      <section className="section-padding bg-gray-50" ref={(el) => addToRefs(el as HTMLDivElement, 1)}>
         <div className="container mx-auto px-4 md:px-8 opacity-0">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">My Skills</h2>
@@ -137,7 +137,7 @@ const Portfolio = () => {
               <div 
                 key={index} 
                 className="bg-white p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow"
-                ref={(el) => addToRefs(el, index + 2)}
+                ref={(el) => addToRefs(el as HTMLDivElement, index + 2)}
                 style={{animationDelay: `${0.1 * (index + 1)}s`}}
               >
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
@@ -156,7 +156,7 @@ const Portfolio = () => {
       </section>
 
       {/* Coming Soon Projects */}
-      <section className="section-padding" ref={(el) => addToRefs(el, 8)}>
+      <section className="section-padding" ref={(el) => addToRefs(el as HTMLDivElement, 8)}>
         <div className="container mx-auto px-4 md:px-8 opacity-0">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Upcoming Projects</h2>
@@ -170,7 +170,7 @@ const Portfolio = () => {
               <div 
                 key={index} 
                 className="bg-white rounded-lg overflow-hidden shadow-sm border border-border hover:shadow-md transition-shadow"
-                ref={(el) => addToRefs(el, index + 9)}
+                ref={(el) => addToRefs(el as HTMLDivElement, index + 9)}
                 style={{animationDelay: `${0.2 * (index + 1)}s`}}
               >
                 <div className="h-52 overflow-hidden">
@@ -200,7 +200,7 @@ const Portfolio = () => {
       </section>
 
       {/* Why Work With Me */}
-      <section className="section-padding bg-primary/10" ref={(el) => addToRefs(el, 12)}>
+      <section className="section-padding bg-primary/10" ref={(el) => addToRefs(el as HTMLDivElement, 12)}>
         <div className="container mx-auto px-4 md:px-8 opacity-0">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Why Work With Me</h2>
@@ -230,7 +230,7 @@ const Portfolio = () => {
               <div 
                 key={i} 
                 className="bg-white p-6 rounded-lg shadow-sm text-center"
-                ref={(el) => addToRefs(el, i + 13)}
+                ref={(el) => addToRefs(el as HTMLDivElement, i + 13)}
                 style={{animationDelay: `${0.2 * (i + 1)}s`}}
               >
                 <div className="mx-auto mb-4">{item.icon}</div>
@@ -243,7 +243,7 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding" ref={(el) => addToRefs(el, 16)}>
+      <section className="section-padding" ref={(el) => addToRefs(el as HTMLDivElement, 16)}>
         <div className="container mx-auto px-4 md:px-8 text-center opacity-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Build Something Together</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">

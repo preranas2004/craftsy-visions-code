@@ -81,7 +81,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="section-padding bg-white" ref={(el) => addToRefs(el, 0)}>
+      <section className="section-padding bg-white" ref={(el) => addToRefs(el as HTMLDivElement, 0)}>
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">We Create Digital Experiences</h2>
@@ -101,7 +101,7 @@ const Home = () => {
               <div 
                 key={i} 
                 className="bg-white p-6 rounded-lg border border-border shadow-sm card-hover text-center opacity-0"
-                ref={(el) => addToRefs(el, i + 1)}
+                ref={(el) => addToRefs(el as HTMLDivElement, i + 1)}
                 style={{animationDelay: `${0.2 * (i + 1)}s`}}
               >
                 <div className="mx-auto mb-4">{item.icon}</div>
@@ -114,7 +114,7 @@ const Home = () => {
       </section>
 
       {/* Services Highlight */}
-      <section className="section-padding bg-gray-50" ref={(el) => addToRefs(el, 6)}>
+      <section className="section-padding bg-gray-50" ref={(el) => addToRefs(el as HTMLDivElement, 6)}>
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
@@ -144,7 +144,7 @@ const Home = () => {
               <div 
                 key={i} 
                 className="service-card overflow-hidden opacity-0"
-                ref={(el) => addToRefs(el, i + 7)}
+                ref={(el) => addToRefs(el as HTMLDivElement, i + 7)}
                 style={{animationDelay: `${0.2 * (i + 1)}s`}}
               >
                 <div className="h-48 overflow-hidden rounded-md mb-4">
@@ -166,7 +166,7 @@ const Home = () => {
             ))}
           </div>
           
-          <div className="text-center mt-12 opacity-0" ref={(el) => addToRefs(el, 10)}>
+          <div className="text-center mt-12 opacity-0" ref={(el) => addToRefs(el as HTMLDivElement, 10)}>
             <Link to="/services">
               <Button className="bg-primary hover:bg-crafty-deep-purple text-white px-6 py-2">
                 View All Services
@@ -179,7 +179,7 @@ const Home = () => {
       {/* CTA Section */}
       <section 
         className="section-padding bg-primary/10" 
-        ref={(el) => addToRefs(el, 11)}
+        ref={(el) => addToRefs(el as HTMLDivElement, 11)}
       >
         <div className="container mx-auto px-4 md:px-8 text-center opacity-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to bring your vision to life?</h2>

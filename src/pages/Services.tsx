@@ -140,7 +140,7 @@ const Services = () => {
             {mainServices.map((service, index) => (
               <div 
                 key={index}
-                ref={(el) => addToRefs(el, index)}
+                ref={(el) => addToRefs(el as HTMLDivElement, index)}
                 className={`grid grid-cols-1 ${index % 2 === 0 ? 'lg:grid-cols-[1fr,1.5fr]' : 'lg:grid-cols-[1.5fr,1fr] lg:flex-row-reverse'} gap-8 lg:gap-16 items-center opacity-0`}
               >
                 <div className={`order-2 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:order-2'}`}>
@@ -180,7 +180,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="section-padding bg-gray-50" ref={(el) => addToRefs(el, 3)}>
+      <section className="section-padding bg-gray-50" ref={(el) => addToRefs(el as HTMLDivElement, 3)}>
         <div className="container mx-auto px-4 md:px-8 opacity-0">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Additional Services</h2>
@@ -195,7 +195,7 @@ const Services = () => {
               <div 
                 key={index} 
                 className="bg-white p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow"
-                ref={(el) => addToRefs(el, index + 4)}
+                ref={(el) => addToRefs(el as HTMLDivElement, index + 4)}
                 style={{animationDelay: `${0.1 * (index + 1)}s`}}
               >
                 <div className="mb-4 text-primary">{service.icon}</div>
@@ -210,7 +210,7 @@ const Services = () => {
       {/* CTA Section */}
       <section 
         className="section-padding bg-primary/10" 
-        ref={(el) => addToRefs(el, 11)}
+        ref={(el) => addToRefs(el as HTMLDivElement, 11)}
       >
         <div className="container mx-auto px-4 md:px-8 text-center opacity-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
